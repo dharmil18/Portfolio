@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Sans Adlam Unjoined
+- Font Author: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/adlam)
+- Font Source: http://fonts.gstatic.com/s/notosansadlamunjoined/v25/P5sszY2MYsLRsB5_ildkzPPDsLQXcOEmaFOqOGcaYrzFTIjsPam_YTP-PMEe-E3slUg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

@@ -1,0 +1,1101 @@
+/* Author: Dharmil Chhadva 
+   ID: C0884179
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root {
+  --white: #f9f9f9;
+  --black: #36383f;
+  --gray: #85888c;
+  --green: #5ec576;
+} /* variables*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style: none;
+}
+/* Header */
+.header {
+  background-color: var(--green);
+  box-shadow: 1px 1px 5px 0px var(--gray);
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+/* Logo */
+.logo {
+  display: inline-block;
+  color: var(--white);
+  font-size: 60px;
+  margin-left: 30px;
+}
+
+/* Nav menu */
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--green);
+  overflow: hidden;
+}
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--white);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  z-index: 1;
+}
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+} /* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--white);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* Footer CSS */
+.footer-distributed {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background-color: var(--green);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  padding: 50px 50px 60px;
+  color: #fff;
+}
+
+.footer-distributed .footer-left {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-distributed .footer-left a {
+  text-decoration: underline !important;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.footer-distributed .footer-links a {
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  margin-right: 20px;
+  /* transition: ease 0.3s; */
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 3%;
+}
+
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.footer-distributed .footer-company-about {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--green);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Portfolio CSS */
+.portfolio {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.portfolio-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.portfolio-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+.portfolio-wrapper .title {
+  margin: 5% 0%;
+}
+
+.portfolio-wrapper .title h3 {
+  font-size: 1.3em;
+  color: var(--white);
+}
+
+.portfolio-wrapper .title p {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.features h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+.features p {
+  font-size: 1em;
+}
+
+.features .features-list {
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  list-style-type: none;
+}
+
+.list li {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--green);
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Gallery */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-gallery > li {
+  flex-basis: 350px; /* width: 350px; */
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.image-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.image-gallery > li {
+  /* ... */
+  position: relative;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+/* Projects */
+.projects {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--green);
+  background-color: var(--white);
+}
+
+.projects-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.projects-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.projects-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+#project-list {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+#project-list th {
+  text-align: center;
+}
+
+#project-list td,
+#project-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#project-list td {
+  color: var(--black);
+}
+
+#project-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#project-list tr:hover {
+  background-color: #ddd;
+}
+
+#project-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.reverse-container {
+  display: flex;
+  flex-direction: column-reverse;
+  color: var(--black);
+  margin-top: 15px;
+}
+
+.blog,
+.sidebar {
+  width: 100%;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--green);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1em;
+}
+
+.image {
+  display: none;
+}
+
+.blog p {
+  text-align: justify;
+}
+
+/* Portfolio CSS End */
+
+/* Work Ex CSS */
+.work {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--black);
+  background-color: var(--black);
+}
+
+.work-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.work-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.work-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+.card {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 2em;
+}
+
+.card p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li::before {
+  content: "\2022";
+  color: var(--green);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.card ul {
+  margin-top: 15px;
+}
+
+.card ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+/* Testimonial */
+
+.testimonial {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.box p {
+  color: var(--black);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 15px 15px -20px var(--black);
+  padding: 30px;
+  margin: 20px;
+}
+
+.green {
+  border-top: 3px solid var(--green);
+}
+
+h3 {
+  color: var(--black);
+  font-weight: var(--weight3);
+}
+
+/* Testimonial End */
+
+/* Work Ex CSS End */
+
+/* Education CSS */
+.education {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--black);
+  background-color: var(--black);
+}
+
+.education-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.education-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.education-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+.card {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 2em;
+}
+
+.card p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li::before {
+  content: "\2022";
+  color: var(--green);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.card ul {
+  margin-top: 15px;
+}
+
+.card ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+/* Certificate */
+.certificate {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.certificate-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.certificate-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.certificate-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+.certificate-card {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.certificate-card h3 {
+  font-size: 2em;
+}
+
+.certificate-card p {
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.certificate-card ul {
+  list-style: none;
+}
+
+.certificate-card ul li::before {
+  content: "\2022";
+  color: var(--green);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.certificate-card ul {
+  margin-top: 15px;
+}
+
+.certificate-card ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.certificate-btn {
+  padding: 15px;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+.btn {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Education CSS End */
+
+/* Responsiveness */
+/* the properties inside a media query will be applied to the web page only when the condition set is valid. */
+@media only screen and (min-width: 769px) {
+  .reverse-container {
+    display: flex;
+    flex-direction: row-reverse;
+    color: var(--black);
+    margin-top: 15px;
+  }
+
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+
+  .menu a:hover {
+    background-color: var(--white);
+    color: var(--green);
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  /* Footer CSS */
+  .footer-distributed {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: var(--green);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 50px 50px 60px;
+    color: #fff;
+  }
+
+  .footer-distributed .footer-left {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+
+  .footer-distributed .footer-links a {
+    color: #ffffff;
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    margin-right: 20px;
+    /* transition: ease 0.3s; */
+  }
+
+  .footer-distributed .footer-company-name {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed .footer-company-about {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+  }
+
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: var(--white);
+    border-radius: 2px;
+    font-size: 20px;
+    color: var(--green);
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* Portfolio CSS */
+  .portfolio {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .portfolio-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .portfolio-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+
+  .portfolio-wrapper .title {
+    margin: 2% 0%;
+  }
+
+  .portfolio-wrapper .title h3 {
+    font-size: 1.5em;
+    color: var(--white);
+  }
+
+  .portfolio-wrapper .title p {
+    font-size: 1.2em;
+  }
+
+  .features h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+
+  .features p {
+    font-size: 1.2em;
+  }
+
+  .portfolio-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  /* Create four equal columns that sits next to each other */
+
+  .image-gallery {
+    flex-direction: row;
+  }
+
+  .image-gallery li {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-gallery img {
+    transition: transform 0.3s ease;
+  }
+
+  .image-gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Projects */
+  .projects {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--white);
+    color: var(--green);
+  }
+  .projects-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .projects-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+
+  .projects-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  #project-list th {
+    text-align: center;
+  }
+
+  /* Blog Start */
+  .container {
+    flex-direction: row;
+  }
+
+  .blog {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+
+  .image {
+    object-fit: contain;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  /* Blog End */
+
+  /* Portfolio CSS End*/
+
+  /* Work Ex CSS */
+  .work {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .work-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .work-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+
+  .work-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  /* Testimonial */
+
+  .row1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-down {
+    position: relative;
+    top: 150px;
+  }
+  .box {
+    width: 20%;
+  }
+  .header p {
+    width: 30%;
+  }
+
+  /* Work Ex CSS End */
+
+  /* Education CSS */
+  .education {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .education-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .education-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+
+  .education-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  /* Certificate */
+  .certificate {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--white);
+    color: var(--black);
+  }
+  .certificate-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .certificate-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+
+  .certificate-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  .certificate-box a {
+    text-decoration: none;
+  }
+
+  .btn {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* Education CSS End */
+}

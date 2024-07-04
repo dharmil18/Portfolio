@@ -1,0 +1,769 @@
+/* Author: Dharmil Chhadva 
+   ID: C0884179
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --white: #f9f9f9;
+  --black: #36383f;
+  --gray: #85888c;
+  --green: #5ec576;
+} /* variables*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  background-color: var(--green);
+  box-shadow: 1px 1px 5px 0px var(--gray);
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+/* Logo */
+.logo {
+  display: inline-block;
+  color: var(--white);
+  font-size: 60px;
+  margin-left: 30px;
+}
+
+/* Nav menu */
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--green);
+  overflow: hidden;
+}
+.menu a {
+  display: block;
+  padding: 30px;
+  color: var(--white);
+  font-weight: 300;
+}
+
+.menu a:hover {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  z-index: 1;
+}
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+} /* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--white);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* Footer CSS */
+.footer-distributed {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  background-color: var(--green);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  padding: 50px 50px 60px;
+  color: #fff;
+}
+
+.footer-distributed .footer-left {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-distributed .footer-left a {
+  text-decoration: underline !important;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.footer-distributed .footer-links a {
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  margin-right: 20px;
+  /* transition: ease 0.3s; */
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 3%;
+}
+
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 40px;
+}
+
+.footer-distributed .footer-company-about {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--green);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Intro Para */
+
+article {
+  width: 100%;
+  min-height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 2%;
+}
+
+.intro {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-img {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.intro-start {
+  width: 100%;
+  margin: auto;
+  min-height: auto;
+  height: auto;
+  background: var(--green);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.name {
+  font-family: "dosis";
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.info {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 20px 0;
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-box a {
+  text-decoration: none;
+}
+
+.btn {
+  background: var(--white);
+  color: var(--green);
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Intro Para End */
+
+/* What I Do */
+.top-skills {
+  margin: 0;
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  background-color: #36383f;
+}
+
+.top-skills-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.top-skills-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.single-skill {
+  position: relative;
+  width: 100%;
+  height: auto; /* Adjust as needed */
+  background: var(--green);
+  box-sizing: border-box;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-bottom: 30px; /* Adjust as needed */
+  text-align: center;
+}
+
+.top-skills-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 20px auto; /* Adjust as needed */
+}
+
+.single-skill p {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.single-skill h3 {
+  font-size: 20px; /* Adjust as needed */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.brand {
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  margin: 5% auto;
+}
+
+.brand i {
+  font-size: 30px;
+  padding: 15px;
+  color: var(--green);
+}
+
+/* What I Do end */
+
+/* All Skills */
+.skills-white {
+  /* margin: 0; */
+  padding: 0;
+  background-position: center center;
+  height: auto; /* Adjust as needed */
+  background-color: var(--white);
+}
+
+.skills-white-wrapper {
+  width: 100%;
+  padding: 5%;
+}
+
+.skills-white-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+  color: var(--green);
+  margin: 0;
+}
+
+.skills-white-line {
+  width: 150px;
+  height: 3px;
+  background: var(--green);
+  margin: 0 auto 0 auto; /* Adjust as needed */
+}
+
+/* All Skills End */
+
+/* Blog Start */
+.container {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  margin-top: 15px;
+}
+
+.blog,
+.sidebar {
+  width: 100%;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--green);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1em;
+}
+
+.image {
+  display: none;
+}
+
+.blog p {
+  text-align: justify;
+}
+
+/* Blog End */
+
+/* Responsiveness */
+/* the properties inside a media query will be applied to the web page only when the condition set is valid. */
+@media only screen and (min-width: 769px) {
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+
+  .menu a:hover {
+    background-color: var(--white);
+    color: var(--green);
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  /* Footer CSS */
+  .footer-distributed {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: var(--green);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    padding: 50px 50px 60px;
+    color: #fff;
+  }
+
+  .footer-distributed .footer-left {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+
+  .footer-distributed .footer-links a {
+    color: #ffffff;
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    margin-right: 20px;
+    /* transition: ease 0.3s; */
+  }
+
+  .footer-distributed .footer-company-name {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 3%;
+  }
+
+  .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed .footer-company-about {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  .footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+  }
+
+  .footer-distributed .footer-icons {
+    margin-top: 25px;
+  }
+
+  .footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: var(--white);
+    border-radius: 2px;
+    font-size: 20px;
+    color: var(--green);
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+
+  /* Intro Para */
+
+  article {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .intro {
+    position: relative;
+    width: 1000px;
+    min-width: 350px;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro-img {
+    width: 40%;
+    height: 500px;
+    background: #fff;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fade-in 1s forwards 1;
+  }
+
+  .intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+  }
+
+  .intro-start {
+    width: 60%;
+    min-height: 500px;
+    height: auto;
+    background: var(--green);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fade-in 1s forwards 1;
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .name {
+    font-family: "dosis";
+    font-size: 70px;
+    text-transform: capitalize;
+  }
+
+  .info {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 50px 0;
+  }
+
+  .btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  .btn-box a {
+    text-decoration: none;
+  }
+
+  .btn {
+    background: var(--white);
+    color: var(--green);
+    border: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* What I Do */
+  .top-skills {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: 100vh;
+    background-color: #36383f;
+    /* font-family: poppins; */
+  }
+  .top-skills-wrapper {
+    width: 1170px;
+    margin: 1% auto;
+  }
+  .top-skills-wrapper h2 {
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+  .single-skill {
+    position: relative;
+    width: 30%;
+    height: 335px;
+    background: var(--green);
+    box-sizing: border-box;
+    padding: 0 15px;
+    transition: 0.5s;
+    overflow: hidden;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+  }
+  .top-skills-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+  .single-skill p {
+    color: var(--white);
+    font-size: 14px;
+  }
+  .single-skill h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    /* font-family: poppins; */
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+  .brand {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 50%;
+    margin: 5% auto;
+  }
+  .brand i {
+    font-size: 30px;
+    padding: 15px;
+    color: var(--green);
+  }
+
+  /* What I Do End */
+
+  /* All Skills */
+  .skills-white {
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    height: auto;
+    background-color: var(--white);
+  }
+  .skills-white-wrapper {
+    width: 100%;
+    margin: 1% auto;
+  }
+  .skills-white-wrapper h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color: var(--green);
+    margin: 0;
+  }
+  .skills-white-line {
+    width: 150px;
+    height: 3px;
+    background: var(--green);
+    margin: 0 auto 60px auto;
+  }
+
+  /* Blog Start */
+  .container {
+    flex-direction: row;
+  }
+
+  .blog {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+
+  .image {
+    object-fit: contain;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  /* Blog End */
+}

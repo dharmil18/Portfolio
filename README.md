@@ -1,1 +1,1 @@
-[Access the website here](https://dharmil18.github.io/CSD-2103-Assignment-1-2/)
+### Checkout my personal portfolio website [https://dharmil18.github.io/Portfolio/](https://dharmil18.github.io/Portfolio/)
